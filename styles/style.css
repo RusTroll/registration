@@ -1,0 +1,9 @@
+#signupForm,
+#signinForm {
+    display: none;
+}
+
+#errorSignin,
+#errorSignup {
+    color: red;
+}
