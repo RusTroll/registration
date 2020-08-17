@@ -39,13 +39,13 @@ class User
             $sql = 'INSERT INTO users(login, email, password) VALUES(:login, :email, :password)';
             $query = $pdo -> prepare($sql);
             $query -> execute(['login' => $login, 'email' => $email, 'password' => $password]);
-            echo 'Вы успешно зарегистрировались!';
+            echo successSignup;
             exit();
         } elseif (!($this -> checkEmail($email, $pdo))) {
-            echo 'Такой Email уже существует';
+            echo existsEmail;
             exit();
         } elseif (!($this -> checkLogin($login, $pdo))) {
-            echo 'Такой логин уже существует';
+            echo existsLogin;
             exit();
         }
     }
@@ -60,14 +60,14 @@ class User
             if (password_verify($password, $row -> password)) {
                 $_SESSION['auth'] = true;
                 $_SESSION['login'] = $row -> login;
-                echo 'Вы успешно авторизовались!';
+                echo successSignin;
                 exit();
             } else {
-                echo 'Пароль неверный!';
+                echo passwordNotValid;
                 exit();
             }
         }
-        echo 'Email неверный';
+        echo emailNotValid;
         exit();
     }
 }

@@ -1,5 +1,5 @@
 <?php
-require_once 'connection.php';
+require_once 'init.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];

@@ -1,5 +1,5 @@
 <?php
-include_once 'connection.php';
+include_once 'init.php';
 
 $login = $_POST['login'];
 $email = $_POST['email'];

@@ -1,6 +1,4 @@
 <?php
-require_once 'connection.php';
+require_once 'init.php';
 
 session_destroy();
-
-echo 'Вы вышли из аккаунта';

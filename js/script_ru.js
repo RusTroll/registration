@@ -69,7 +69,7 @@ $(document).ready(() => {
             $("#errorSignup").text("Введите пароль (не менее 6 символов)");
             return false;
         } else if ($password2 == "") {
-            $("#errorSignup").text("Введите пароль повторно");
+            $("#errorSignup").text("Повторите пароль");
             return false;
         } else if ($password1 != $password2) {
             $("#errorSignup").text("Пароли не совпадают");
